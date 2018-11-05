@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { EventComponent } from './event/event.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EventComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
