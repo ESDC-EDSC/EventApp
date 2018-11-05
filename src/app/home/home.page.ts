@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  events: Event[];
+
+  // declare some sort of event service
+  constructor() {
+    // get the events here...
+  }
 
 }
