@@ -1,1 +1,1 @@
-export { Event } from './Event.model';
+export { EventModel } from './EventModel.model';

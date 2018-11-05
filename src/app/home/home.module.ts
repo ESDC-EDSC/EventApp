@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [HomePage]
 })
 export class HomePageModule {}
