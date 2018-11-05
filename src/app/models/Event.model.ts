@@ -1,6 +1,8 @@
 export interface Event {
-    Title: string;
-    Description: string;
+    TitleEN: string;
+    DescriptionEN: string;
+    TitleFR: string;
+    DescriptionFR: string;
     Location: string;
     ImageURL: string;
     MapURL: string;
