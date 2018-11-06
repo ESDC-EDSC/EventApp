@@ -10,7 +10,7 @@
         "Price": 0.00,
         "ImageURL": "src\\assets\\img\\christmas.png",
         "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MusicURL": "src/assets/mp3/santa_toy_parade.mp3"
     },
     {
         "Category": "Free Event",
@@ -23,7 +23,7 @@
         "Price": 0.00,
         "ImageURL": "src\\assets\\img\\pet-dog.png",
         "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MusicURL": "src/assets/mp3/pet_expo.mp3"
     },
     {
         "Category": "Music",
@@ -36,7 +36,7 @@
         "Price": 69.00,
         "ImageURL": "src\\assets\\img\\mumford.png",
         "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MusicURL": "src/assets/mp3/Mumford_&_Sons.mp3"
     },
     {
         "Category": "Music",
@@ -49,7 +49,7 @@
         "Price": 41.00,
         "ImageURL": "src\\assets\\img\\tribe.png",
         "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MusicURL": "src/assets/mp3/A_Tribe_Called_Red.mp3"
     },
     {
         "Category": "Sports",
@@ -62,7 +62,7 @@
         "Price": 23.00,
         "ImageURL": "src\\assets\\img\\ottawa-67s.png",
         "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MusicURL": "src/assets/mp3/Ottawa_67.mp3"
     },
     {
         "Category": "Sports",
@@ -74,7 +74,7 @@
         "Date": "Nov 18 - 1:00 PM",
         "Price": 47.00,
         "ImageURL": "src\\assets\\img\\redblacks.png",
-        "MapURL": "src/assets/img/downtown-ottawa.png",
-        "MusicURL": "string"
+        "MapURL": "string",
+        "MusicURL": "src/assets/mp3/touch_down.mp3"
     }
 ]
