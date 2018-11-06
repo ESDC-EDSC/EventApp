@@ -1,8 +1,12 @@
-<ion-content class='card-background-page'>
-  <ion-card>
-    <img src="{{this.event.ImageURL}}" />
-    <div class="card-title">{{this.event.TitleEN}}</div>
-    <div class="card-subtitle">{{ this.event.Date }}</div>
-    <div class="card-subtitle">{{ this.event.Location }}</div>
-  </ion-card>
-</ion-content>
+<ion-card>
+  <ion-img src="{{ this.event.ImageURL }}"></ion-img>
+  <ion-card-header class="card-title">
+    <ion-card-title>{{ this.event.TitleEN }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="card-details">
+    <ion-card-subtitle>Date:</ion-card-subtitle>
+    <p class="first-detail">{{ this.event.Date }}</p>
+    <ion-card-subtitle>Location:</ion-card-subtitle>
+    <p>{{ this.event.Location }}</p>
+  </ion-card-content>
+</ion-card>
