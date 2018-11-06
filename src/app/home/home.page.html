@@ -6,16 +6,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-searchbar placeholder="Filter Events">
-  <!-- <ion-buttons>
-    <ion-button>Sort</ion-button>
-  </ion-buttons> -->
-  <ion-select id="sort-options-select" placeholder="Sort">
-
-  </ion-select>
 </ion-searchbar>
+<ion-item id="sort-options-container">
+  <ion-label>Sort</ion-label>
+  <ion-select id="sort-options-select">
+    <ion-select-option value="price">Price</ion-select-option>
+    <ion-select-option value="volunteer">Name Desc.</ion-select-option>
+    <ion-select-option value="volunteer">Name Asce.</ion-select-option>
+  </ion-select>
+</ion-item>
 <ion-content *ngIf='events' padding>
-    <eventloader id="app-event" *ngFor="let event of events"
-    [event]="event">
+  <eventloader id="app-event" *ngFor="let event of events" [event]="event">
     {{event.TitleEN}}
-    </eventloader>
+  </eventloader>
 </ion-content>
