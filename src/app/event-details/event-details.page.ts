@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { EventModel } from '../models';
 
 @Component({
   selector: 'app-event-details',
@@ -6,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-details.page.scss'],
 })
 export class EventDetailsPage implements OnInit {
+  event: EventModel;
 
-  constructor() { }
+  constructor(private readonly route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.event = JSON.parse(params['message']);
+      console.log(this.event.TitleEN);
+       });
+  }
 
   ngOnInit() {
   }
