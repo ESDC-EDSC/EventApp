@@ -11,11 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { EventComponent } from './event/event.component';
+import { EventService } from './services/EventService';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
-  declarations: [AppComponent, EventComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
@@ -29,6 +32,7 @@ import { EventComponent } from './event/event.component';
     }),
   ],
   providers: [
+    EventService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
