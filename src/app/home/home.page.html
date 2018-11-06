@@ -5,20 +5,17 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-searchbar placeholder="Filter Events">
+  <!-- <ion-buttons>
+    <ion-button>Sort</ion-button>
+  </ion-buttons> -->
+  <ion-select id="sort-options-select" placeholder="Sort">
 
+  </ion-select>
+</ion-searchbar>
 <ion-content *ngIf='events' padding>
     <eventloader id="app-event" *ngFor="let event of events"
     [event]="event">
     {{event.TitleEN}}
     </eventloader>
-  <ion-grid>
-    <!-- Filter bar placeholder -->
-    <ion-row>
-
-    </ion-row>
-    <!-- ListView -->
-    <ion-row>
-      
-    </ion-row>
-  </ion-grid>
 </ion-content>

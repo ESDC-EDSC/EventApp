@@ -13,9 +13,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EventComponent } from './event/event.component';
 import { EventService } from './services/EventService';
 import { HttpModule } from '@angular/http';
+import { SearchPipe } from './pipes/search/search.pipe';
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SearchPipe, SortPipe],
   entryComponents: [],
   imports: [
     HttpModule,
