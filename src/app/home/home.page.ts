@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   searchTerms: string;
   descending = false;
   order: number;
-  column = 'name';
+  column: any;
 
   constructor(
     public readonly translate: TranslateService,
@@ -33,29 +33,35 @@ export class HomePage implements OnInit {
   }
 
   sortItems(event) {
-    // const selection = event.detail.value;
-    // switch (selection) {
-    //   case "priceLow":
+    const selection = event.detail.value;
+    switch (selection) {
+      case "priceLow":
+        this.column = "Price";
+        this.order = -1;
+        break;
+      case "priceHigh":
+        this.column = "Price";
+        this.order = -1;
+        break;
+      case "dateSoon":
+        this.column = "priceLow";
+        this.order = -1;
+        break;
+      case "dateLate":
+        this.column = "priceLow";
+        this.order = -1;
+        break;
+      case "alphaZ":
+        this.column = "priceLow";
+        this.order = -1;
+        break;
+      case "alphaA":
+        this.column = "priceLow";
+        this.order = -1;
+        break;
 
-    //     break;
-    //   case "priceHigh":
-
-    //     break;
-    //   case "dateSoon":
-
-    //     break;
-    //   case "dateLate":
-
-    //     break;
-    //   case "alphaZ":
-
-    //     break;
-    //   case "alphaA":
-
-    //     break;
-
-    //   default:
-    //     break;
-    // }
+      default:
+        break;
+    }
   }
 }
