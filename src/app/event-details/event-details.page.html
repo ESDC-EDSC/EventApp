@@ -13,7 +13,7 @@
     <ion-row>
     <ion-col size="8">
     <ion-card-header>
-        <ion-card-title>Title of Event</ion-card-title>
+        <ion-card-title>{{this.event.TitleEN}}</ion-card-title>
     </ion-card-header>
   </ion-col>
   <ion-col size="4">
@@ -25,21 +25,21 @@
   </ion-col>
 </ion-row>
   </ion-grid>
-    <ion-img src="src/assets/img/christmas.png"></ion-img>
+    <ion-img src={{this.event.ImageURL}}></ion-img>
     <ion-card-content>
-      <audio id="mp3" controls src="src/assets/mp3/A_Tribe_Called_Red.mp3">Some Audio Clip</audio>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+      <audio id="mp3" controls src={{this.event.MusicURL}}>Some Audio Clip</audio>
+        <p>{{this.event.DescriptionEN}}</p>
     </ion-card-content>
 </ion-card>
 <ion-row justify-content-center>
     <ion-item>
         <ion-icon class="calendar" name="calendar"></ion-icon>
-        <ion-label class="date">November 20th, 2018</ion-label>
+        <ion-label class="date">{{this.event.Date}}</ion-label>
       </ion-item>
 </ion-row>
 <ion-row padding>
   <h2>Location</h2>
-  <ion-img src="src/assets/img/downtown-ottawa.png"></ion-img>
-  <p class="address">50 Rideau St, Ottawa, ON K1N 9J7</p>
+  <ion-img src={{this.event.MapURL}}></ion-img>
+  <p class="address">{{this.event.Location}}</p>
 </ion-row>
 </ion-content>

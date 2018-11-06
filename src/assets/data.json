@@ -9,7 +9,7 @@
         "Date": "NOVEMBER 17, 2018 at 11:00 AM",
         "Price": 0.00,
         "ImageURL": "src\\assets\\img\\christmas.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     },
     {
@@ -22,7 +22,7 @@
         "Date": "Sunday, November 11, 2018",
         "Price": 0.00,
         "ImageURL": "src\\assets\\img\\pet-dog.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     },
     {
@@ -35,7 +35,7 @@
         "Date": "Mar 5 - 7:30 PM",
         "Price": 69.00,
         "ImageURL": "src\\assets\\img\\mumford.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     },
     {
@@ -48,7 +48,7 @@
         "Date": "Nov 22 - 7:30 PM",
         "Price": 41.00,
         "ImageURL": "src\\assets\\img\\tribe.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     },
     {
@@ -61,7 +61,7 @@
         "Date": "Dec 7 - 7:30 PM",
         "Price": 23.00,
         "ImageURL": "src\\assets\\img\\ottawa-67s.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     },
     {
@@ -74,7 +74,7 @@
         "Date": "Nov 18 - 1:00 PM",
         "Price": 47.00,
         "ImageURL": "src\\assets\\img\\redblacks.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "string"
     }
 ]
