@@ -1,0 +1,45 @@
+.linkRow{
+    height: 100%;
+}
+
+ion-card-header{
+    padding: 0;
+}
+
+#icon{
+    display: block;
+    font-size: 1.2rem;
+    margin-left: 2px;
+    float: right;
+}
+
+
+#mp3{
+    width: 100%;
+}
+
+.address{
+    display: block;
+    margin: 0 auto;
+    color: #2699FB;
+}
+
+.date{
+    font-size: 1.5rem;
+    color: #2699FB
+}
+
+.calendar{
+    font-size: 2rem;
+    color: #2699FB;
+    margin-right: 10px;
+}
+
+ion-card{
+    background-color: #F1F9FF;
+    color: #2699FB;
+}
+
+ion-card-title{
+    font-size: 20px;
+}

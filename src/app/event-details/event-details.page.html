@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Selected Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+    <ion-row>
+    <ion-col size="8">
+    <ion-card-header>
+        <ion-card-title>Title of Event</ion-card-title>
+    </ion-card-header>
+  </ion-col>
+  <ion-col size="4">
+    <ion-row class="linkRow" justify-content-center align-items-end>
+    <a  href="https://www.ottawatourism.ca/events/christmas-in-the-valley-artisan-show/">Buy Tickets
+    <ion-icon id="icon" name="link"></ion-icon>
+    </a>
+  </ion-row>
+  </ion-col>
+</ion-row>
+  </ion-grid>
+    <ion-img src="src/assets/img/christmas.png"></ion-img>
+    <ion-card-content>
+      <audio id="mp3" controls src="src/assets/mp3/A_Tribe_Called_Red.mp3">Some Audio Clip</audio>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+    </ion-card-content>
+</ion-card>
+<ion-row justify-content-center>
+    <ion-item>
+        <ion-icon class="calendar" name="calendar"></ion-icon>
+        <ion-label class="date">November 20th, 2018</ion-label>
+      </ion-item>
+</ion-row>
+<ion-row padding>
+  <h2>Location</h2>
+  <ion-img src="src/assets/img/downtown-ottawa.png"></ion-img>
+  <p class="address">50 Rideau St, Ottawa, ON K1N 9J7</p>
+</ion-row>
+</ion-content>
