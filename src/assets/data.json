@@ -74,7 +74,7 @@
         "Date": "Nov 18 - 1:00 PM",
         "Price": 47.00,
         "ImageURL": "src\\assets\\img\\redblacks.png",
-        "MapURL": "string",
+        "MapURL": "src/assets/img/downtown-ottawa.png",
         "MusicURL": "src/assets/mp3/touch_down.mp3"
     }
 ]
