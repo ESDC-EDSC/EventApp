@@ -41,23 +41,23 @@ export class HomePage implements OnInit {
         break;
       case "priceHigh":
         this.column = "Price";
-        this.order = -1;
+        this.order = 1;
         break;
       case "dateSoon":
-        this.column = "priceLow";
+        this.column = "Date";
         this.order = -1;
         break;
       case "dateLate":
-        this.column = "priceLow";
-        this.order = -1;
+        this.column = "Date";
+        this.order = 1;
         break;
       case "alphaZ":
-        this.column = "priceLow";
+        this.column = "TitleEN";
         this.order = -1;
         break;
       case "alphaA":
-        this.column = "priceLow";
-        this.order = -1;
+        this.column = "TitleEN";
+        this.order = 1;
         break;
 
       default:
