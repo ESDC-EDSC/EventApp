@@ -10,7 +10,7 @@ export class EventService {
     }
 
     getEvents(): Observable<EventModel[]> {
-        return this.http.get('../../assets/dummyData.json').map((res: any) => res.json())
+        return this.http.get('../../assets/data.json').map((res: any) => res.json())
             .catch((error: any) => {console.log('Something broke...'); return Observable.throw(error); });
     }
 }
