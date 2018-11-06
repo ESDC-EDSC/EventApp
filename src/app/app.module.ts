@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { EventComponent } from './event/event.component';
+import { EventService } from './services/EventService';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [AppComponent, EventComponent],

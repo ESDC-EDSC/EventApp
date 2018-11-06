@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { EventModel } from '../models';
+import { EventService } from '../services/EventService';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -30,7 +31,11 @@ export class HomePage {
     }
   ];
 
-  constructor(public readonly translate: TranslateService) {
+  constructor(public readonly translate: TranslateService,
+    private readonly eventService: EventService) {
+    this.eventService.getEvents()
+      .subscribe(data => this.events = data,
+        error => console.log(error + 'Wow you suck'));
 
   }
 }
