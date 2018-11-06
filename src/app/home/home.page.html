@@ -14,9 +14,8 @@
     </ion-row>
     <!-- ListView -->
     <ion-row>
-      <event-item *ngFor="let event of events"
-      [event]="event"></event-item>
-
+      <app-event *ngFor="let event of events" [event]="event">
+      </app-event>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -18,6 +18,7 @@ import { HttpModule } from '@angular/http';
   declarations: [AppComponent, EventComponent],
   entryComponents: [],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
@@ -31,6 +32,7 @@ import { HttpModule } from '@angular/http';
     }),
   ],
   providers: [
+    EventService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

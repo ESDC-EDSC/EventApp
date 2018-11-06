@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EventModel } from '../models';
 
 @Component({
   selector: 'app-event',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EventComponent {
   @Input()
-  event: Event;
+  event: EventModel;
 
-  constructor() { }
+  constructor() {
+    console.log('Hello');
+   }
 }
