@@ -15,7 +15,7 @@ import { EventService } from './services/EventService';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
-  declarations: [AppComponent, EventComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     HttpModule,

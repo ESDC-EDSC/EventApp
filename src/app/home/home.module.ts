@@ -23,7 +23,6 @@ import { EventComponent } from '../event/event.component';
     ])
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  
-  declarations: [HomePage]
+  declarations: [HomePage, EventComponent]
 })
 export class HomePageModule {}
