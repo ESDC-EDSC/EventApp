@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { EventComponent } from '../event/event.component';
+import { SortPipe } from '../pipes/sort/sort.pipe';
+import { SearchPipe } from '../pipes/search/search.pipe';
 
 @NgModule({
   imports: [
@@ -23,6 +25,6 @@ import { EventComponent } from '../event/event.component';
     ])
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [HomePage, EventComponent]
+  declarations: [HomePage, EventComponent, SortPipe, SearchPipe]
 })
 export class HomePageModule {}

@@ -17,7 +17,7 @@ import { SearchPipe } from './pipes/search/search.pipe';
 import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
-  declarations: [AppComponent, SearchPipe, SortPipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     HttpModule,
