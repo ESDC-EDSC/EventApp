@@ -1,5 +1,5 @@
 <ion-content class='card-background-page'>
-  <ion-card>
+  <ion-card (click)='onClick()'>
     <img src="{{this.event.ImageURL}}" />
     <div class="card-title">{{this.event.TitleEN}}</div>
     <div class="card-subtitle">{{ this.event.Date }}</div>
