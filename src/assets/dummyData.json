@@ -6,7 +6,7 @@
         "DescriptionFR": "its a French concert",
         "Location": "Ottawa, Canada",
         "Date": "11/11/11",
-        "ImageURL": "https://via.placeholder.com/350x150",
+        "ImageURL": "/home/glenn/EventApp/src/assets/img/christmas.png",
         "MapURL": "string",
         "MusicURL": "string"
     },
