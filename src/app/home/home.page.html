@@ -1,20 +1,20 @@
 <!--Remove/Add comment to enable/disable primary theme-->
-<!-- <ion-header>
+<ion-header>
   <ion-toolbar color="primary">
     <ion-title>
       {{ "title" | translate }}
     </ion-title>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <!--Remove/Add comment to enable/disable seconadry theme-->
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="secondary">
     <ion-title style="color:rgb(33, 59, 33);">
       {{ "title" | translate }}
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content *ngIf='events' padding>
     <eventloader id="app-event" *ngFor="let event of events"
