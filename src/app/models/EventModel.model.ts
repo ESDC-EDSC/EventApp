@@ -10,4 +10,5 @@ export interface EventModel {
     ImageURL: string;
     MapURL: string;
     MusicURL: string;
+    TicketsURL: string;
 }
