@@ -8,9 +8,9 @@
     "Location": "Laurier Avenue to Bank Street to Lansdowne",
     "Date": "Nov 17 - 11:00 AM",
     "Price": 0.0,
-    "ImageURL": "assets\\img\\christmas.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/santa_toy_parade.mp3",
+    "ImageURL": "src\\assets\\img\\christmas.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/santa_toy_parade.mp3",
     "TicketsURL": "https://thesantaclausparade.com/volunteer/"
   },
   {
@@ -22,9 +22,9 @@
     "Location": "EY Centre",
     "Date": "Nov 11 - 9:00 AM",
     "Price": 0.0,
-    "ImageURL": "assets\\img\\pet-dog.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/pet_expo.mp3",
+    "ImageURL": "src\\assets\\img\\pet-dog.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/pet_expo.mp3",
     "TicketsURL": "https://ottawapetexpo.ca/show-info/"
   },
 
@@ -37,9 +37,9 @@
     "Location": "Canadian Tire Centre (Scotiabank Place)",
     "Date": "Mar 5 - 7:30 PM",
     "Price": 69.0,
-    "ImageURL": "assets\\img\\mumford.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/Mumford_&_Sons.mp3",
+    "ImageURL": "src\\assets\\img\\mumford.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/Mumford_&_Sons.mp3",
     "TicketsURL": "https://www.ticketmaster.ca/mumford-sons-tickets/artist/1388154"
   },
   {
@@ -51,9 +51,9 @@
     "Location": "National Arts Centre",
     "Date": "Nov 22 - 7:30 PM",
     "Price": 41.0,
-    "ImageURL": "assets\\img\\tribe.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/A_Tribe_Called_Red.mp3",
+    "ImageURL": "src\\assets\\img\\tribe.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/A_Tribe_Called_Red.mp3",
     "TicketsURL": "https://www1.ticketmaster.ca/a-tribe-called-red-ottawa-ontario-11-22-2018/event/310054A7991013CD?dma_id=522&artistid=1784064&majorcatid=10001&minorcatid=60"
   },
   {
@@ -65,9 +65,9 @@
     "Location": "Centre Robert Guertin",
     "Date": "Dec 7 - 7:30 PM",
     "Price": 23.0,
-    "ImageURL": "assets\\img\\ottawa67s.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/Ottawa_67.mp3",
+    "ImageURL": "src\\assets\\img\\ottawa-67s.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/Ottawa_67.mp3",
     "TicketsURL": "http://ottawa67s.com/single-game-tickets"
   },
   {
@@ -79,11 +79,9 @@
     "Location": "TD Place Stadium",
     "Date": "Nov 18 - 1:00 PM",
     "Price": 47.0,
-    "ImageURL": "assets\\img\\redblacks.png",
-    "MapURL": "assets/img/downtown-ottawa.png",
-    "MusicURL": "assets/mp3/touch_down.mp3",
+    "ImageURL": "src\\assets\\img\\redblacks.png",
+    "MapURL": "src/assets/img/downtown-ottawa.png",
+    "MusicURL": "src/assets/mp3/touch_down.mp3",
     "TicketsURL": "https://www.ottawaredblacks.com/2018-single-tickets/"
   }
 ]
-
-   
