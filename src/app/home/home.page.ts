@@ -37,11 +37,11 @@ export class HomePage implements OnInit {
     switch (selection) {
       case "priceLow":
         this.column = "Price";
-        this.order = -1;
+        this.order = 1;
         break;
       case "priceHigh":
         this.column = "Price";
-        this.order = 1;
+        this.order = -1;
         break;
       case "dateSoon":
         this.column = "Date";
