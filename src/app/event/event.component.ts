@@ -12,7 +12,6 @@ export class EventComponent implements OnInit {
   event: EventModel;
 
   constructor(private readonly router: Router) {
-    console.log('in constructor');
    }
 
    onClick(route: string) {
@@ -20,7 +19,5 @@ export class EventComponent implements OnInit {
   }
 
    ngOnInit() {
-    console.log('in onInit');
-    console.log(JSON.stringify(this.event));
    }
 }
