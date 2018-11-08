@@ -28,15 +28,9 @@ export class EventDetailsPage implements OnInit {
     public readonly features: FeatureFlags,
     public readonly translate: TranslateService,
     public readonly tl: ToggleLanguageService,
-    private storage: Storage,
     private themeSetting: ThemeSettingService
   ) {
     this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
-
-    this.route.queryParams.subscribe(params => {
-
-      this.event = JSON.parse(params["message"]);
-    });
 
   }
 

@@ -10,6 +10,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { EventComponent } from '../event/event.component';
 import { SortPipe } from '../pipes/sort/sort.pipe';
 import { SearchPipe } from '../pipes/search/search.pipe';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,6 @@ import { SearchPipe } from '../pipes/search/search.pipe';
     ])
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [HomePage, EventComponent, SortPipe, SearchPipe]
+  declarations: [HomePage, EventComponent, ThemeToggleComponent, SortPipe, SearchPipe]
 })
 export class HomePageModule {}
