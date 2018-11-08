@@ -1,3 +1,4 @@
+import { ToggleLanguageService } from './services/toggle-language.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -49,6 +50,7 @@ export class FeatureFlags {
     StatusBar,
     SplashScreen,
     FeatureFlags,
+    ToggleLanguageService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],

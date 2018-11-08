@@ -3,41 +3,46 @@
     <ion-buttons slot='start'>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>My Selected Event</ion-title>
+    <ion-title slot="primary">{{ this.title }}</ion-title>
+    <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small" >{{ "lang-button" | translate }} </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-
-<h1> {{ this.event.TitleEN }} </h1>
-<a  *ngIf="this.features.ticketPurchase"  
-  href=" {{ this.event.TicketsURL }} "
-  float-end >
-  {{ "Buy Tickets" | translate }} <ion-icon id="icon" name="link"></ion-icon> 
-</a>
+<p >
+  <span float-start>
+    {{ "price" | translate }}{{ this.price }}
+  </span>
+  <a  *ngIf="this.features.ticketPurchase"
+    href=" {{ this.event.TicketsURL }} "
+    float-end >
+    {{ "buy-tickets" | translate }}
+    <ion-icon id="icon" name="link"></ion-icon>
+  </a>
+</p>
 
 
 
 <ion-img src={{this.event.ImageURL}}></ion-img>
 
-<audio  *ngIf="this.features.audioClip" 
-        id="mp3" 
+<audio  *ngIf="this.features.audioClip"
+        id="mp3"
         controls
-        src={{this.event.MusicURL}}>Some Audio Clip</audio>
+        src={{this.event.MusicURL}}></audio>
 
-<p>{{ this.event.DescriptionEN }}</p>
+<p>{{ this.description }}</p>
 
 <ion-item *ngIf="this.features.calendar"
   justify-content-center >
     <ion-icon class="calendar" name="calendar"></ion-icon>
-    <ion-label >{{ this.event.Date }}</ion-label>
+    <ion-label >{{ this.date }}</ion-label>
 </ion-item>
 
 <div *ngIf="this.features.map">
-  <h2>{{ "Location" | translate }}</h2>
+  <h2>{{ "location-title" | translate }}</h2>
   <ion-img src="{{ this.event.MapURL }}"></ion-img>
-  <p class="address">{{ this.event.Location }}</p>
+  <p class="address">{{ this.location }}</p>
 </div>
 
 </ion-content>
