@@ -9,12 +9,23 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-import { EventComponent } from './event/event.component';
 import { EventService } from './services/EventService';
 import { HttpModule } from '@angular/http';
-import { SearchPipe } from './pipes/search/search.pipe';
-import { SortPipe } from './pipes/sort/sort.pipe';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr, 'fr');
+
+export class FeatureFlags {
+  readonly search: boolean = true;
+  readonly bilingualBug: boolean = true;
+  readonly themeBug: boolean = true;
+  readonly map: boolean = true;
+  readonly ticketPurchase: boolean = true;
+  readonly sortEvents: boolean = true ;
+  readonly audioClip: boolean = true;
+  readonly calendar: boolean = true;
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +48,7 @@ import { SortPipe } from './pipes/sort/sort.pipe';
     EventService,
     StatusBar,
     SplashScreen,
+    FeatureFlags,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
