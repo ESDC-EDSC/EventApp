@@ -2,13 +2,20 @@
   <div class='crop'>
     <ion-img src="{{ this.event.ImageURL }}"></ion-img>
   </div>
+
   <ion-card-header>
-    <ion-card-title class="card-title">{{ this.event.TitleEN }}</ion-card-title>
+    <ion-card-title>{{ this.event.TitleEN }}</ion-card-title>
   </ion-card-header>
+
   <ion-card-content class="card-details">
-    <ion-card-subtitle class='subtitle'>Date:</ion-card-subtitle>
+
+    <ion-card-subtitle>Date:</ion-card-subtitle>
     <p class="content">{{ this.event.Date }}</p>
-    <ion-card-subtitle class='subtitle'>Location:</ion-card-subtitle>
+
+    <ion-card-subtitle>Location:</ion-card-subtitle>
     <p class="content">{{ this.event.Location }}</p>
+
+    <ion-card-subtitle>Price:</ion-card-subtitle>
+    <p class="content">{{ this.event.Price | currency:'CAD':'symbol-narrow':'1.2':'fr' }}</p>
   </ion-card-content>
 </ion-card>

@@ -4,6 +4,7 @@ import { EventModel } from "../models";
 import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
+import { FeatureFlags } from "../app.module";
 
 @Component({
   selector: "app-home",
@@ -20,6 +21,7 @@ export class HomePage implements OnInit {
   constructor(
     public readonly translate: TranslateService,
     private readonly eventService: EventService,
+    public features: FeatureFlags
   ) {}
 
   ngOnInit() {
