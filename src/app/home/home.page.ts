@@ -6,6 +6,7 @@ import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
 import { FeatureFlags } from "../app.module";
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: "app-home",
@@ -18,13 +19,17 @@ export class HomePage implements OnInit {
   descending = false;
   order: number;
   column: any;
+  isDarkTheme: boolean;
 
   constructor(
     public readonly translate: TranslateService,
     private readonly eventService: EventService,
-    public readonly features: FeatureFlags,
+    public features: FeatureFlags,
+    private storage: Storage,
     public readonly tl: ToggleLanguageService
-  ) {}
+  ) {
+    storage.get('isDarkTheme').then((val) => this.isDarkTheme = val);
+  }
 
   ngOnInit() {
     this.eventService.getEvents().subscribe(

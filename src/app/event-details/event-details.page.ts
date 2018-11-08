@@ -5,6 +5,8 @@ import { ActivatedRoute } from "@angular/router";
 import { EventModel } from "../models";
 import { FeatureFlags } from "../app.module";
 import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: "app-event-details",
@@ -13,6 +15,7 @@ import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
 })
 export class EventDetailsPage implements OnInit {
   event: EventModel;
+  isDarkTheme: boolean;
 
   title: string;
   description: string;
@@ -24,14 +27,14 @@ export class EventDetailsPage implements OnInit {
     private readonly route: ActivatedRoute,
     public readonly features: FeatureFlags,
     public readonly translate: TranslateService,
-    public readonly tl: ToggleLanguageService
+    public readonly tl: ToggleLanguageService,
+    private storage: Storage
   ) {
+    storage.get('isDarkTheme').then((val) => this.isDarkTheme = val);
 
     this.route.queryParams.subscribe(params => {
 
       this.event = JSON.parse(params["message"]);
-      console.log(this.event.TitleEN);
-
     });
 
   }

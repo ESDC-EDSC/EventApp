@@ -6,6 +6,8 @@
       {{ "title" | translate }}
     </ion-title>
     <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small" >{{ "lang-button" | translate }} </ion-button>
+    <theme-toggle slot='end'></theme-toggle>
+
   </ion-toolbar>
 </ion-header>
 
@@ -31,7 +33,8 @@
 
 
 <ion-content *ngIf='events' padding>
-  <eventloader id="app-event" *ngFor="let event of events | search: searchTerms | sort: { property: column, order: order }" [event]="event">
+  <eventloader id="app-event" *ngFor="let event of events | search: searchTerms | sort: { property: column, order: order }"
+    [event]="event">
     <!-- {{event.TitleEN}} -->
   </eventloader>
 </ion-content>

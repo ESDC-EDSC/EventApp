@@ -14,6 +14,7 @@ import { EventService } from './services/EventService';
 import { HttpModule } from '@angular/http';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { IonicStorageModule } from '@ionic/storage';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -35,6 +36,7 @@ export class FeatureFlags {
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
