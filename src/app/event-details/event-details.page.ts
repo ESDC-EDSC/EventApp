@@ -31,6 +31,10 @@ export class EventDetailsPage implements OnInit {
     private themeSetting: ThemeSettingService
   ) {
     this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    this.route.queryParams.subscribe(params => {
+
+      this.event = JSON.parse(params["message"]);
+    });
 
   }
 
