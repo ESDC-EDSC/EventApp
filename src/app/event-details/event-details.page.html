@@ -1,48 +1,43 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot='start'>
+  <ion-toolbar>
+    <ion-title slot="primary">{{ this.title }}</ion-title>
+    <ion-buttons slot='secondary'>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title slot="primary">{{ this.title }}</ion-title>
-    <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small" >{{ "lang-button" | translate }} </ion-button>
+    <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small">{{ "lang-button" | translate }}
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-<p >
-  <span float-start>
-    {{ "price" | translate }}{{ this.price }}
-  </span>
-  <a  *ngIf="this.features.ticketPurchase"
-    href=" {{ this.event.TicketsURL }} "
-    float-end >
-    {{ "buy-tickets" | translate }}
-    <ion-icon id="icon" name="link"></ion-icon>
-  </a>
-</p>
+  <p>
+    <span float-start>
+      {{ "price" | translate }}{{ this.price }}
+    </span>
+    <a *ngIf="this.features.ticketPurchase" href=" {{ this.event.TicketsURL }} " float-end>
+      {{ "buy-tickets" | translate }}
+      <ion-icon id="icon" name="link"></ion-icon>
+    </a>
+  </p>
 
 
 
-<ion-img src={{this.event.ImageURL}}></ion-img>
+  <ion-img src={{this.event.ImageURL}}></ion-img>
 
-<audio  *ngIf="this.features.audioClip"
-        id="mp3"
-        controls
-        src={{this.event.MusicURL}}></audio>
+  <audio *ngIf="this.features.audioClip" id="mp3" controls src={{this.event.MusicURL}}></audio>
 
-<p>{{ this.description }}</p>
+  <p>{{ this.description }}</p>
 
-<ion-item *ngIf="this.features.calendar"
-  justify-content-center >
+  <ion-item *ngIf="this.features.calendar" justify-content-center>
     <ion-icon class="calendar" name="calendar"></ion-icon>
-    <ion-label >{{ this.date }}</ion-label>
-</ion-item>
+    <ion-label id='dateLabel'>{{ this.date }}</ion-label>
+  </ion-item>
 
-<div *ngIf="this.features.map">
-  <h2>{{ "location-title" | translate }}</h2>
-  <ion-img src="{{ this.event.MapURL }}"></ion-img>
-  <p class="address">{{ this.location }}</p>
-</div>
+  <div *ngIf="this.features.map">
+    <h2>{{ "location-title" | translate }}</h2>
+    <ion-img src="{{ this.event.MapURL }}"></ion-img>
+    <p class="address">{{ this.location }}</p>
+  </div>
 
 </ion-content>

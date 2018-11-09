@@ -1,6 +1,7 @@
 .light-theme {
   ion-content {
     --background: #e6e6e6;
+    --color: #000000;
   }
 
   ion-card {
@@ -9,6 +10,11 @@
   }
 
   ion-card-title {
+    --color: #000000;
+  }
+
+  .calendar {
+    --background:;
     --color: #000000;
   }
 }
