@@ -1,3 +1,16 @@
 {
-  "title": "Ski s'passe"
+  "title": "Ski s'passe",
+  "buy-tickets": "(fr)Buy Tickets",
+  "lang-button": "en",
+  "filter-events": "(fr) Filter Events",
+  "sort": "(fr) Sort",
+  "price-low-high": "(fr) Price: Low First",
+  "price-high-low": "(fr) Price: High First",
+  "alpha-a-z": "(fr) Alphabetical: A - Z",
+  "alpha-z-a": "(fr) Alphabetical: Z - A",
+  "price": "(fr) Price:",
+  "location": "(fr) Location:",
+  "date": "(fr) Date:",
+  "location-title": "(fr) Location"
+
 }

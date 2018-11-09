@@ -1,9 +1,11 @@
+import { ToggleLanguageService } from './../services/toggle-language.service';
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { EventModel } from "../models";
 import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
+import { FeatureFlags } from "../app.module";
 
 @Component({
   selector: "app-home",
@@ -20,6 +22,8 @@ export class HomePage implements OnInit {
   constructor(
     public readonly translate: TranslateService,
     private readonly eventService: EventService,
+    public readonly features: FeatureFlags,
+    public readonly tl: ToggleLanguageService
   ) {}
 
   ngOnInit() {
@@ -28,9 +32,10 @@ export class HomePage implements OnInit {
         this.events = data;
         console.log(this.events);
       },
-      error => console.log(error + "Wow you suck")
+      error => console.log(error + "Unable To Get Events")
     );
   }
+
 
   sortItems(event) {
     const selection = event.detail.value;

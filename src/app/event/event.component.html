@@ -1,13 +1,21 @@
-
 <ion-card (click)='onClick("event-details")'>
-  <ion-img src="{{ this.event.ImageURL }}"></ion-img>
-  <ion-card-header class="card-title">
-    <ion-card-title>{{ this.event.TitleEN }}</ion-card-title>
+  <div class='crop'>
+    <ion-img src="{{ this.event.ImageURL }}"></ion-img>
+  </div>
+
+  <ion-card-header>
+    <ion-card-title>{{ this.title }}</ion-card-title>
   </ion-card-header>
+
   <ion-card-content class="card-details">
-    <ion-card-subtitle>Date:</ion-card-subtitle>
-    <p class="first-detail">{{ this.event.Date }}</p>
-    <ion-card-subtitle>Location:</ion-card-subtitle>
-    <p>{{ this.event.Location }}</p>
+
+    <ion-card-subtitle>{{ "date" | translate }}</ion-card-subtitle>
+    <p class="content">{{ this.date }}</p>
+
+    <ion-card-subtitle>{{ "location" | translate }}</ion-card-subtitle>
+    <p class="content">{{ this.location }}</p>
+
+    <ion-card-subtitle>{{ "price" | translate }}</ion-card-subtitle>
+    <p class="content">{{ this.price }} </p>
   </ion-card-content>
 </ion-card>

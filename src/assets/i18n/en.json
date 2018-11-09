@@ -1,3 +1,16 @@
 {
-  "title": "Wha's Happ"
+  "title": "Wha's Happ",
+  "buy-tickets": "Buy Tickets",
+  "lang-button": "fr",
+  "filter-events": "Filter Events",
+  "sort": "Sort",
+  "price-low-high": "Price: Low First",
+  "price-high-low": "Price: High First",
+  "alpha-a-z": "Alphabetical: A - Z",
+  "alpha-z-a": "Alphabetical: Z - A",
+  "price": "Price:",
+  "location": "Location:",
+  "date": "Date:",
+  "location-title": "Location"
+
 }
