@@ -6,6 +6,7 @@ import { EventModel } from "../models";
 import { FeatureFlags } from "../app.module";
 import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
 import { Storage } from '@ionic/storage';
+import { ThemeSettingService } from '../services/theme-setting.service';
 
 
 @Component({
@@ -15,8 +16,7 @@ import { Storage } from '@ionic/storage';
 })
 export class EventDetailsPage implements OnInit {
   event: EventModel;
-  isDarkTheme: boolean;
-
+  selectedTheme: String;
   title: string;
   description: string;
   date: string;
@@ -28,9 +28,10 @@ export class EventDetailsPage implements OnInit {
     public readonly features: FeatureFlags,
     public readonly translate: TranslateService,
     public readonly tl: ToggleLanguageService,
-    private storage: Storage
+    private storage: Storage,
+    private themeSetting: ThemeSettingService
   ) {
-    storage.get('isDarkTheme').then((val) => this.isDarkTheme = val);
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
 
     this.route.queryParams.subscribe(params => {
 

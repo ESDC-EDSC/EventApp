@@ -1,4 +1,4 @@
-import { ToggleLanguageService } from './../services/toggle-language.service';
+import { ToggleLanguageService } from "./../services/toggle-language.service";
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { EventModel } from "../models";
@@ -6,7 +6,7 @@ import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
 import { FeatureFlags } from "../app.module";
-import { Storage } from '@ionic/storage';
+import { ThemeSettingService } from "../services/theme-setting.service";
 
 @Component({
   selector: "app-home",
@@ -19,16 +19,16 @@ export class HomePage implements OnInit {
   descending = false;
   order: number;
   column: any;
-  isDarkTheme: boolean;
+  selectedTheme: String;
 
   constructor(
     public readonly translate: TranslateService,
     private readonly eventService: EventService,
     public features: FeatureFlags,
-    private storage: Storage,
-    public readonly tl: ToggleLanguageService
+    public readonly tl: ToggleLanguageService,
+    private readonly themeSetting: ThemeSettingService
   ) {
-    storage.get('isDarkTheme').then((val) => this.isDarkTheme = val);
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   ngOnInit() {
@@ -41,6 +41,14 @@ export class HomePage implements OnInit {
     );
   }
 
+  toggleAppTheme() {
+    console.log('in theme');
+    if (this.selectedTheme === "dark-theme") {
+      this.themeSetting.setActiveTheme("light-theme");
+    } else {
+      this.themeSetting.setActiveTheme("dark-theme");
+    }
+  }
 
   sortItems(event) {
     const selection = event.detail.value;

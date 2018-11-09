@@ -5,6 +5,7 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { SkeletonText } from '@ionic/angular';
 import { CurrencyPipe } from '@angular/common';
 import { Storage } from '@ionic/storage';
+import { ThemeSettingService } from '../services/theme-setting.service';
 
 
 @Component({
@@ -20,14 +21,14 @@ export class EventComponent implements OnInit {
   date: string;
   location: string;
   price: string;
-  isDarkTheme: boolean;
-
+  selectedTheme: String;
   constructor(
     private readonly router: Router,
     private storage: Storage,
-    public readonly translate: TranslateService
+    public readonly translate: TranslateService,
+    private themeSetting: ThemeSettingService
   ) {
-    storage.get('isDarkTheme').then((val) => this.isDarkTheme = val);
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   private setText(langCode: string) {

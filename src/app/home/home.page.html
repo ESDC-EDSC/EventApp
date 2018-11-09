@@ -6,8 +6,7 @@
       {{ "title" | translate }}
     </ion-title>
     <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small" >{{ "lang-button" | translate }} </ion-button>
-    <theme-toggle slot='end'></theme-toggle>
-
+    <ion-toggle (ionChange)='toggleAppTheme()' float-right></ion-toggle>
   </ion-toolbar>
 </ion-header>
 
