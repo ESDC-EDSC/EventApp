@@ -33,6 +33,7 @@ export class FeatureFlags {
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+   // ToggleLanguageService,
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(),

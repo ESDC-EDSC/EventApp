@@ -1,16 +1,16 @@
 {
   "title": "Ski s'passe",
-  "buy-tickets": "(fr)Buy Tickets",
+  "buy-tickets": "Acheter des billets",
   "lang-button": "en",
-  "filter-events": "(fr) Filter Events",
-  "sort": "(fr) Sort",
-  "price-low-high": "(fr) Price: Low First",
-  "price-high-low": "(fr) Price: High First",
-  "alpha-a-z": "(fr) Alphabetical: A - Z",
-  "alpha-z-a": "(fr) Alphabetical: Z - A",
-  "price": "(fr) Price:",
-  "location": "(fr) Location:",
-  "date": "(fr) Date:",
-  "location-title": "(fr) Location"
+  "filter-events": "Filtrer par événement",
+  "sort": "Trier",
+  "price-low-high": "Prix: Moins cher avant",
+  "price-high-low": "Prix: Plus cher avant",
+  "alpha-a-z": "Alphabétique:A - Z",
+  "alpha-z-a": "Alphabétique:Z - A",
+  "price": "Prix:",
+  "location": "Emplacement:",
+  "date": "Date:",
+  "location-title": "Emplacement"
 
 }
