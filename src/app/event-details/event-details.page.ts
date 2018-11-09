@@ -3,7 +3,7 @@ import { ToggleLanguageService } from './../services/toggle-language.service';
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { EventModel } from "../models";
-import { FeatureFlags } from "../app.module";
+import { FeatureFlags } from './../featureFlags';
 import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
 
 @Component({
