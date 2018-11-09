@@ -39,7 +39,9 @@
 </ion-row>
 <ion-row padding>
   <h2>Location</h2>
-  <ion-img src={{this.event.MapURL}}></ion-img>
+  <ion-content> 
+    <iframe  width="400" height="300" frameborder="0" style="border:0" allowfullscreen>{{this.event.MapURL}}</iframe>
+  </ion-content>
   <p class="address">{{this.event.Location}}</p>
 </ion-row>
 </ion-content>
