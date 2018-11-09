@@ -5,8 +5,7 @@ import { EventModel } from "../models";
 import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
-import { FeatureFlags } from "../app.module";
-
+import { FeatureFlags } from './../featureFlags';
 @Component({
   selector: "app-home",
   templateUrl: "home.page.html",

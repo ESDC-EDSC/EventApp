@@ -14,24 +14,17 @@ import { EventService } from './services/EventService';
 import { HttpModule } from '@angular/http';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FeatureFlags } from './featureFlags';
 
 registerLocaleData(localeFr, 'fr');
 
-export class FeatureFlags {
-  readonly search: boolean = true;
-  readonly bilingualBug: boolean = true;
-  readonly themeBug: boolean = true;
-  readonly map: boolean = true;
-  readonly ticketPurchase: boolean = true;
-  readonly sortEvents: boolean = true ;
-  readonly audioClip: boolean = true;
-  readonly calendar: boolean = true;
-}
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+   // ToggleLanguageService,
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(),
