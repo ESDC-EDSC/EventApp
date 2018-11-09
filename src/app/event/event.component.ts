@@ -21,10 +21,9 @@ export class EventComponent implements OnInit {
   date: string;
   location: string;
   price: string;
-  selectedTheme: String;
+  selectedTheme: string;
   constructor(
     private readonly router: Router,
-    private storage: Storage,
     public readonly translate: TranslateService,
     private themeSetting: ThemeSettingService
   ) {

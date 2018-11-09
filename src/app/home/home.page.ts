@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
   descending = false;
   order: number;
   column: any;
-  selectedTheme: String;
+  selectedTheme: string;
 
   constructor(
     public readonly translate: TranslateService,
@@ -42,12 +42,12 @@ export class HomePage implements OnInit {
   }
 
   toggleAppTheme() {
-    console.log('in theme');
     if (this.selectedTheme === "dark-theme") {
       this.themeSetting.setActiveTheme("light-theme");
     } else {
       this.themeSetting.setActiveTheme("dark-theme");
     }
+    console.log(this.selectedTheme);
   }
 
   sortItems(event) {

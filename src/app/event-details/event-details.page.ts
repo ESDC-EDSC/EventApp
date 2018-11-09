@@ -16,7 +16,7 @@ import { ThemeSettingService } from '../services/theme-setting.service';
 })
 export class EventDetailsPage implements OnInit {
   event: EventModel;
-  selectedTheme: String;
+  selectedTheme: string;
   title: string;
   description: string;
   date: string;

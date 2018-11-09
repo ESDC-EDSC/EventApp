@@ -5,15 +5,14 @@ import { BehaviorSubject } from "rxjs/Rx";
   providedIn: "root"
 })
 export class ThemeSettingService {
-  private theme: BehaviorSubject<String>;
+  private theme: BehaviorSubject<string>;
 
   constructor() {
-    this.theme = new BehaviorSubject("dark-theme");
+    this.theme = new BehaviorSubject("light-theme");
   }
 
   setActiveTheme(val) {
     this.theme.next(val);
-    console.log('theme toggled');
   }
 
   getActiveTheme() {

@@ -10,7 +10,7 @@ import { ThemeSettingService } from './services/theme-setting.service';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  selectedTheme: String;
+  selectedTheme: string;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
