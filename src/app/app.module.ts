@@ -28,7 +28,6 @@ registerLocaleData(localeFr, 'fr');
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(),
-    IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
