@@ -1,8 +1,10 @@
+import { FeatureFlags } from "./../featureFlags";
 import { TranslateService } from "@ngx-translate/core";
 import { Injectable } from "@angular/core";
-import { FeatureFlags } from "../app.module";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class ToggleLanguageService {
   constructor(
     private translate: TranslateService,
@@ -16,6 +18,12 @@ export class ToggleLanguageService {
         this.translate.use("fr");
       } else {
         this.translate.use("en");
+      }
+    } else {
+      if (current === "fr") {
+        this.translate.use("fr");
+      } else {
+        this.translate.use("fr");
       }
     }
   }
