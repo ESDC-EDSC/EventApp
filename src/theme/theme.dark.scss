@@ -1,5 +1,37 @@
 .dark-theme {
-  ion-card-title {
-    color: fuchsia;
+  --background: #000000;
+  background: #000000;
+
+  ion-content {
+    --background: #000000;
   }
-}  
+
+  ion-card {
+    --background: #262626;
+    --color: #fff;
+  }
+
+  ion-card-title {
+    --color: #fff;
+  }
+
+  ion-toolbar {
+    --background: #262626;
+    --color: #fff;
+  }
+
+  ion-searchbar {
+    --background: #262626;
+    --color: #fff;
+  }
+
+  ion-item {
+    --background: #262626;
+    --color: #fff;
+  }
+
+  ion-app {
+    --background: #262626;
+    --color: #fff;
+  }
+}

@@ -1,2 +1,14 @@
 .light-theme {
+  ion-content {
+    --background: #e6e6e6;
   }
+
+  ion-card {
+    --background: #fff;
+    --color: #000000;
+  }
+
+  ion-card-title {
+    --color: #000000;
+  }
+}
