@@ -1,4 +1,4 @@
-import { ToggleLanguageService } from './../services/toggle-language.service';
+import { ToggleLanguageService } from "./../services/toggle-language.service";
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { EventModel } from "../models";
@@ -6,6 +6,7 @@ import { EventService } from "../services/EventService";
 import { SearchPipe } from "../pipes/search/search.pipe";
 import { SortPipe } from "../pipes/sort/sort.pipe";
 import { FeatureFlags } from './../featureFlags';
+import { ThemeSettingService } from "../services/theme-setting.service";
 @Component({
   selector: "app-home",
   templateUrl: "home.page.html",
@@ -17,13 +18,17 @@ export class HomePage implements OnInit {
   descending = false;
   order: number;
   column: any;
+  selectedTheme: string;
 
   constructor(
     public readonly translate: TranslateService,
     private readonly eventService: EventService,
-    public readonly features: FeatureFlags,
-    public readonly tl: ToggleLanguageService
-  ) {}
+    public features: FeatureFlags,
+    public readonly tl: ToggleLanguageService,
+    private readonly themeSetting: ThemeSettingService
+  ) {
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
+  }
 
   ngOnInit() {
     this.eventService.getEvents().subscribe(
@@ -35,6 +40,14 @@ export class HomePage implements OnInit {
     );
   }
 
+  toggleAppTheme() {
+    if (this.selectedTheme === "dark-theme") {
+      this.themeSetting.setActiveTheme("light-theme");
+    } else {
+      this.themeSetting.setActiveTheme("dark-theme");
+    }
+    console.log(this.selectedTheme);
+  }
 
   sortItems(event) {
     const selection = event.detail.value;

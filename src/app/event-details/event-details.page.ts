@@ -5,6 +5,9 @@ import { ActivatedRoute } from "@angular/router";
 import { EventModel } from "../models";
 import { FeatureFlags } from './../featureFlags';
 import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
+import { Storage } from '@ionic/storage';
+import { ThemeSettingService } from '../services/theme-setting.service';
+
 
 @Component({
   selector: "app-event-details",
@@ -13,7 +16,7 @@ import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
 })
 export class EventDetailsPage implements OnInit {
   event: EventModel;
-
+  selectedTheme: string;
   title: string;
   description: string;
   date: string;
@@ -24,14 +27,13 @@ export class EventDetailsPage implements OnInit {
     private readonly route: ActivatedRoute,
     public readonly features: FeatureFlags,
     public readonly translate: TranslateService,
-    public readonly tl: ToggleLanguageService
+    public readonly tl: ToggleLanguageService,
+    private themeSetting: ThemeSettingService
   ) {
-
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.route.queryParams.subscribe(params => {
 
       this.event = JSON.parse(params["message"]);
-      console.log(this.event.TitleEN);
-
     });
 
   }

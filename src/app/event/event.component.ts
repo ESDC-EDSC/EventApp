@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { SkeletonText } from '@ionic/angular';
 import { CurrencyPipe } from '@angular/common';
+import { Storage } from '@ionic/storage';
+import { ThemeSettingService } from '../services/theme-setting.service';
+
 
 @Component({
   selector: 'eventloader',
@@ -18,11 +21,14 @@ export class EventComponent implements OnInit {
   date: string;
   location: string;
   price: string;
-
+  selectedTheme: string;
   constructor(
     private readonly router: Router,
-    public readonly translate: TranslateService
-  ) {}
+    public readonly translate: TranslateService,
+    private themeSetting: ThemeSettingService
+  ) {
+    this.themeSetting.getActiveTheme().subscribe(val => this.selectedTheme = val);
+  }
 
   private setText(langCode: string) {
     if (langCode === 'en') {
