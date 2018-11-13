@@ -1,0 +1,65 @@
+repositories:
+  - name: mts
+    url: http://helm.mobiletechnology.solutions
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+
+context: kube-context
+
+#default values to set for args along with dedicated keys that can be set by contributers, cli args take precedence over these
+helmDefaults:
+  tillerNamespace: kube-system
+  # args:
+    # - "--tls"
+    #- "--debug"
+  # additional and global args passed to helm
+  # args:
+  #   - "--set k=v"
+  # defaults for verify, wait, force, timeout and recreatePods under releases[]
+  verify: false
+  wait: false
+  timeout: 600
+  recreatePods: true
+
+releases: 
+# Servers
+  - name: spiderman
+    chart: bitnami/apache
+    namespace: default
+    wait: false
+    recreatePods: true
+    installed: true
+    force: false
+
+  - name: ironman
+    chart: bitnami/apache
+    namespace: default
+    wait: false
+    recreatePods: true
+    installed: true
+    force: false
+
+  - name: batman
+    chart: bitnami/apache
+    namespace: default
+    wait: false
+    recreatePods: true
+    installed: true
+    force: false
+
+  - name: superman
+    chart: bitnami/apache
+    namespace: default
+    wait: false
+    recreatePods: true
+    installed: true
+    force: false
+
+  - name: aquaman
+    chart: bitnami/apache
+    namespace: default
+    wait: false
+    recreatePods: true
+    installed: true
+    force: false
+
