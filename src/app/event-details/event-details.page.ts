@@ -5,7 +5,6 @@ import { ActivatedRoute } from "@angular/router";
 import { EventModel } from "../models";
 import { FeatureFlags } from './../featureFlags';
 import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
-import { Storage } from '@ionic/storage';
 import { ThemeSettingService } from '../services/theme-setting.service';
 
 

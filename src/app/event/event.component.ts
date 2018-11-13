@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { SkeletonText } from '@ionic/angular';
 import { CurrencyPipe } from '@angular/common';
-import { Storage } from '@ionic/storage';
 import { ThemeSettingService } from '../services/theme-setting.service';
 
 
