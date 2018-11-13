@@ -4,8 +4,11 @@
     <ion-title slot="primary">
       {{ "title" | translate }}
     </ion-title>
-    <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small" >{{ "lang-button" | translate }} </ion-button>
-    <ion-toggle (ionChange)='toggleAppTheme()' float-right></ion-toggle>
+    <ion-button (click)="this.tl.toggleLanguage()" slot="secondary" size="small">{{ "lang-button" | translate }}
+    </ion-button>
+    <div *ngIf="this.features.theme">
+      <ion-toggle (ionChange)='toggleAppTheme()' float-right></ion-toggle>
+    </div>
   </ion-toolbar>
 </ion-header>
 
