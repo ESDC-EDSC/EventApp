@@ -13,7 +13,7 @@ export class ToggleLanguageService {
 
   toggleLanguage() {
     const current = this.translate.currentLang;
-    if (this.features.bilingualBug) {
+    if (this.features.bilingualBug === false) {
       if (current === "en") {
         this.translate.use("fr");
       } else {
