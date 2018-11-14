@@ -1,12 +1,5 @@
 version: 2
 general:
-  branches:
-    only:
-      - group1
-      - group2
-      - group3
-      - group4
-      - group5
 jobs:
   build:
     docker:  
@@ -31,4 +24,12 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only:
+                - group1
+                - group2
+                - group3
+                - group4
+                - group5
