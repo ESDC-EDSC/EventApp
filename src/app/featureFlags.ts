@@ -1,10 +1,10 @@
 export class FeatureFlags {
-    readonly search: boolean = true;
+    readonly search: boolean = false;
     readonly bilingualBug: boolean = false;
     readonly theme: boolean = false;
-    readonly map: boolean = true;
-    readonly ticketPurchase: boolean = true;
+    readonly map: boolean = false;
+    readonly ticketPurchase: boolean = false;
     readonly sortEvents: boolean = false;
     readonly audioClip: boolean = false;
-    readonly calendar: boolean = true;
+    readonly calendar: boolean = false;
   }
