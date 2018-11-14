@@ -53,8 +53,8 @@ export class EventDetailsPage implements OnInit {
     } else {
       this.title = this.event.TitleFR;
       this.description = this.event.DescriptionFR;
-      this.date = this.event.Date;
-      this.location = this.event.Location;
+      this.date = this.event.DateFR;
+      this.location = this.event.LocationFR;
       this.price = new CurrencyPipe('fr').transform(
         this.event.Price,
         'CAD',
