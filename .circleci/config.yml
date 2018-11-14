@@ -1,0 +1,34 @@
+version: 2
+general:
+  branches:
+    only:
+      - group1
+      - group2
+      - group3
+      - group4
+      - group5
+jobs:
+  build:
+    docker:  
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: build image
+          command: docker build . -t eventapp:$CIRCLE_BRANCH
+      - run: 
+          name: tag image
+          command: docker tag eventapp:$CIRCLE_BRANCH mtsstm/eventapp:$CIRCLE_BRANCH
+      - run: 
+          name: login docker hub
+          command: docker login -u $DOCKER_HUB_U -p $DOCKER_HUB_P
+      - run: 
+          name: push image
+          command: docker push mtsstm/eventapp:$CIRCLE_BRANCH
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
