@@ -1,6 +1,6 @@
 export class FeatureFlags {
     readonly search: boolean = false;
-    readonly bilingualBug: boolean = true;
+    readonly bilingualBug: boolean = false;
     readonly theme: boolean = false;
     readonly map: boolean = false;
     readonly ticketPurchase: boolean = false;

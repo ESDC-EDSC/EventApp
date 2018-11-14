@@ -5,7 +5,9 @@ export interface EventModel {
     TitleFR: string;
     DescriptionFR: string;
     Location: string;
+    LocationFR: string;
     Date: string;
+    DateFR: string;
     Price: number;
     ImageURL: string;
     MapURL: string;
